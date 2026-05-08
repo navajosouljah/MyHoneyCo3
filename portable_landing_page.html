@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHoneyCo - Portable Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-honey: #D4A054;
+            --color-honey-hover: #C8903E;
+            --color-deep-roast: #1A1410;
+            --color-cream-linen: #F5EDE0;
+            --color-cream-linen-alt: #EDE5D8;
+            --color-hairline: #E0D5C8;
+            --color-muted-earth: #6B5E57;
+            --color-faint-earth: #9A8E85;
+        }
+
+        body {
+            background-color: var(--color-cream-linen);
+            color: var(--color-deep-roast);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hex-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .hexagon-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(212, 160, 84, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .radial-fade {
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+            mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+        }
+
+        .bg-deep-roast { background-color: var(--color-deep-roast); }
+        .text-honey { color: var(--color-honey); }
+        .text-cream-linen { color: var(--color-cream-linen); }
+        .text-faint-earth { color: var(--color-faint-earth); }
+        .border-honey { border-color: var(--color-honey); }
+        .bg-honey { background-color: var(--color-honey); }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        honey: '#D4A054',
+                        'honey-hover': '#C8903E',
+                        'deep-roast': '#1A1410',
+                        'cream-linen': '#F5EDE0',
+                        'cream-linen-alt': '#EDE5D8',
+                        'hairline': '#E0D5C8',
+                        'muted-earth': '#6B5E57',
+                        'faint-earth': '#9A8E85',
+                    },
+                    borderRadius: {
+                        'cta': '3px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection:bg-[#D4A054] selection:text-[#1A1410] overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#1A1410]/95 backdrop-blur-md border-b border-[#D4A054]/10 h-16 flex items-center px-6 lg:px-12">
+        <div class="max-w-[1200px] w-full mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-1 text-xl font-black">
+                <span class="font-serif italic font-bold tracking-tight text-[#F5EDE0]">MyHoney</span>
+                <span class="font-serif italic font-bold tracking-tight text-[#D4A054]">Co.</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-[14px] font-bold tracking-[0.1em] text-[#D4A054] border-b-2 border-[#D4A054] pb-1">SHOP</a>
+                <a href="#" class="text-[14px] font-bold tracking-[0.1em] text-[#F5EDE0] hover:text-[#D4A054] transition-colors">PROTOCOLS</a>
+                <a href="#" class="text-[14px] font-bold tracking-[0.1em] text-[#F5EDE0] hover:text-[#D4A054] transition-colors">SCIENCE</a>
+                <a href="#" class="text-[14px] font-bold tracking-[0.1em] text-[#F5EDE0] hover:text-[#D4A054] transition-colors">ABOUT</a>
+            </div>
+
+            <button class="bg-[#D4A054] text-[#1A1410] font-bold text-[14px] tracking-[0.05em] px-6 py-2.5 rounded-[3px] hover:bg-[#C8903E] transition-colors">
+                SUBSCRIBE & SAVE ›
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-24 md:pt-48 md:pb-36 bg-[#1A1410] relative overflow-hidden">
+        <div class="absolute inset-0 hexagon-bg opacity-20 pointer-events-none"></div>
+        <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-[#F5EDE0] mb-10 tracking-tight">
+                    85% OF YOUR LION'S MANE NEVER REACHES YOUR BLOODSTREAM. 
+                    <span class="font-serif italic text-[#D4A054] font-normal tracking-wide mt-2 block lowercase">We fixed that.</span>
+                </h1>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-[#D4A054] text-[#1A1410] font-bold text-[14px] tracking-[0.1em] px-10 py-5 rounded-[3px] hover:bg-[#C8903E] transition-all flex items-center gap-2 group">
+                        SHOP HONEY <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                    <button class="border-2 border-[#D4A054] text-[#D4A054] font-bold text-[14px] tracking-[0.1em] px-10 py-5 rounded-[3px] hover:bg-[#D4A054]/5 transition-all">
+                        EXPLORE MIND RELEASE ›
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-10 bg-[#D4A054]/10 blur-3xl rounded-full"></div>
+                
+                <!-- Floating Gummy Packet with glow for visibility -->
+                <div class="absolute right-0 lg:-right-12 top-1/2 -translate-y-1/2 z-30 w-[70%] pointer-events-none">
+                    <div class="absolute inset-0 bg-[#D4A054]/20 blur-[100px] rounded-full scale-75 lg:scale-110 translate-x-1/4"></div>
+                    <img src="input_file_0.png" alt="Mind Release Gummy Packet" class="relative z-10 w-full h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)] brightness-110 contrast-110 rotate-[-12deg]">
+                </div>
+
+                <div class="hex-mask bg-[#D4A054] p-1 relative z-10">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Qtw_U4vE3xBW8OV13xrXb4FyC7tcAA5YQEb1pjoUAg7Oifc-hV6T69xCd6i0__YhBtpdp93HK1rx_cvqAOcjXi6EKt8UmvvRFkrBcSpT4nFXDk4LSw1y9jq9LCdZ_26EPRl6e-nCJOR0Yupp_Q3f8cCQDRkJqMUrllCqeENjm38ljg_uIxp8ten2CQm4wx9XcogRlwq3ZESrEbDVbo7d8mMDdG518WJKKL2eVeQvDTnoljR8Kw1ngpP8u_G5e4xok1ZnE3EPjpE" class="hex-mask w-full h-[500px] object-cover" alt="Hero">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mind Release Section -->
+    <section class="py-32 lg:py-48 bg-[#1A1410] relative overflow-hidden">
+        <!-- High Visibility Background Sachet -->
+        <div class="absolute inset-0 z-0 opacity-60 pointer-events-none flex items-center justify-center overflow-hidden">
+            <img src="input_file_1.png" class="w-full h-full object-contain scale-[1.3] lg:scale-[1.5] radial-fade contrast-[1.1] brightness-[0.9]" alt="Background Sachet">
+        </div>
+
+        <div class="absolute inset-0 hexagon-bg opacity-5 pointer-events-none"></div>
+
+        <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+            <div class="order-2 lg:order-1">
+                <span class="inline-block px-4 py-1.5 bg-[#D4A054]/10 text-[#D4A054] font-bold text-[10px] tracking-[0.15em] mb-8 hex-mask uppercase">Advanced Formulation</span>
+                <h2 class="text-5xl lg:text-7xl font-black text-[#F5EDE0] mb-2 tracking-tight uppercase leading-none">Mind Release</h2>
+                <p class="font-serif italic text-[#D4A054] text-2xl mb-8">Mushroom Metabolites. Not Mushrooms.</p>
+
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[#9A8E85] font-bold text-[11px] tracking-widest mb-8 uppercase">
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#D4A054]"></i> LEGAL IN 48 STATES</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#D4A054]"></i> NO PSILOCYBIN</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#D4A054]"></i> NO PSILOCIN</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#D4A054]"></i> NO THC</span>
+                </div>
+
+                <p class="text-lg text-[#F5EDE0]/90 mb-6 leading-relaxed max-w-[540px]">
+                    Mind Release gummies are built around isolated mushroom metabolites — the active compounds extracted from functional mushrooms. More targeted. More bioavailable. A cleaner, more intentional experience than whole mushroom products.
+                </p>
+
+                <p class="text-[13px] text-[#9A8E85] mb-10 leading-relaxed uppercase tracking-wider font-medium max-w-[480px]">
+                    400mg proprietary mushroom metabolite blend per gummy. Third-party lab tested. Certificates of analysis available for every batch. Age-verified at 21+.
+                </p>
+
+                <div class="mb-10 space-y-2">
+                    <div class="text-3xl font-black text-[#F5EDE0]">$59.99 <span class="text-[14px] text-[#9A8E85] font-bold tracking-widest">/ 10 GUMMIES</span></div>
+                    <div class="text-[#D4A054] font-bold tracking-widest text-[13px]">SUBSCRIBE AT $50.99 · SAVE 15%</div>
+                </div>
+
+                <button class="w-full sm:w-auto bg-[#D4A054] text-[#1A1410] font-bold tracking-[0.15em] px-12 py-5 rounded-[3px] hover:bg-[#C8903E] transition-all text-[14px] flex items-center justify-center gap-3 group">
+                    ADD TO CART — MIND RELEASE <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <div class="bg-[#1A1410]/60 border border-[#D4A054]/20 p-8 md:p-12 rounded-[3px] backdrop-blur-xl relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="hexagon" class="text-[#D4A054] w-24 h-24"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="text-[13px] font-bold text-[#D4A054] tracking-[0.3em] mb-2 uppercase">Tiered Dosing Panel</h4>
+                        <p class="text-[#9A8E85] text-[11px] font-bold tracking-widest uppercase mb-10">Start low. Find your level. Every experience is personal.</p>
+
+                        <div class="space-y-4">
+                            <div class="p-5 border border-white/5 bg-black/20 rounded-[2px]">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-[12px] tracking-[0.2em] font-black text-[#F5EDE0]">MICRODOSE</span>
+                                    <span class="text-[11px] font-bold tracking-widest text-[#9A8E85]">1 GUMMY</span>
+                                </div>
+                                <p class="text-[12px] text-[#9A8E85] leading-relaxed">Subtle mood lift, light creativity, social ease</p>
+                            </div>
+                            <div class="p-5 border border-[#D4A054]/40 bg-[#D4A054]/20 rounded-[2px]">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-[12px] tracking-[0.2em] font-black text-[#D4A054]">ACTIVE</span>
+                                    <span class="text-[11px] font-bold tracking-widest text-[#9A8E85]">4 GUMMIES</span>
+                                </div>
+                                <p class="text-[12px] text-[#9A8E85] leading-relaxed">Significant experiential shift, deep relaxation, creative flow</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generic Protocol Section (Simplified Sample) -->
+    <section class="py-24 bg-[#EDE5D8]">
+        <div class="max-w-[1200px] mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black uppercase mb-16">The Daily Protocol</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                   <div class="w-12 h-12 bg-[#D4A054] hex-mask mx-auto mb-6 flex items-center justify-center">
+                       <i data-lucide="sun" class="text-[#1A1410] w-6 h-6"></i>
+                   </div>
+                   <h3 class="font-black mb-2">MORNING ACTIVATE</h3>
+                   <p class="text-[14px] text-[#6B5E57]">1 Spoon of Raw Focus with coffee.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-[#D4A054] hex-mask mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="zap" class="text-[#1A1410] w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-black mb-2">WORK SUSTAIN</h3>
+                    <p class="text-[14px] text-[#6B5E57]">1 Honey Packet mid-afternoon.</p>
+                 </div>
+                 <div>
+                    <div class="w-12 h-12 bg-[#D4A054] hex-mask mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="moon" class="text-[#1A1410] w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-black mb-2">EVENING RECOVER</h3>
+                    <p class="text-[14px] text-[#6B5E57]">1 Dose of Deep Night.</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
